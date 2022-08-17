@@ -10,6 +10,7 @@
   "dependencies": {
     "@apollo/client": "^3.6.9",
     "@vue/apollo-composable": "^4.0.0-alpha.19",
+    "bulma": "^0.9.4",
     "core-js": "^3.6.5",
     "graphql": "^16.5.0",
     "graphql-tag": "^2.12.6",

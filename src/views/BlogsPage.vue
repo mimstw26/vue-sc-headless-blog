@@ -1,5 +1,6 @@
 <template>
-  <div id="page-wrap">
+
+  <!-- <div id="page-wrap">
     <div class="grid-wrap">
       <div v-if="error">Something went wrong...</div>
       <div v-if="loading">Loading...</div>
@@ -12,8 +13,26 @@
           <pre v-html="contenttype.body"></pre>
       </div>
     </div>
-  </div>
+  </div> -->
   
+<div class="container">
+  <div v-if="error">Something went wrong...</div>
+  <div v-if="loading">Loading...</div>
+  <div class="tile is-ancestor">
+    <div v-for="contenttype in result.allTmtestcontenttype.results"
+        :key="contenttype.id" class="tile">
+        <div class="tile is-parent">
+          <article class="tile is-child box">
+            <p class="title">{{contenttype.title}}</p>
+            <p class="subtitle">{{contenttype.abstract}}</p>
+            <figure class="image is-4by3">
+              <img v-bind:src="contenttype.picture">
+            </figure>
+          </article>
+        </div>
+      </div>
+  </div>
+</div>
   
 </template>
 
@@ -24,17 +43,6 @@ import { useQuery } from '@vue/apollo-composable'
 
   export default{
     name: 'BlogsPage',
-    // components: {
-    //   BlogGrid
-    // },
-    // data() {
-    //   const { results, loading, error } = useQuery(ALL_POSTS_QUERY);
-    //   return {
-    //     results,
-    //     loading, 
-    //     error
-    //   }
-    // },
     setup () {
       const { result, loading, error } = useQuery(ALL_POSTS_QUERY);
       return {
