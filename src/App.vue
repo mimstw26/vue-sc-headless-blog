@@ -3,6 +3,14 @@
     <NavBar/>
     <router-view/>
   </div>
+  <footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>SC Headless Blog Site</strong> by <a href="mailto:thomas.mims@sitecore.com">Mims</a>. The source code is found
+      <a href="https://github.com/mimstw26/vue-sc-headless-blog" target="_blank">here</a>.
+    </p>
+  </div>
+</footer>
 </template>
 
 <script>
@@ -16,6 +24,7 @@ export default {
 </script>
 
 <style>
+  @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
   * {
     box-sizing: border-box;
     font-family: Arial;
