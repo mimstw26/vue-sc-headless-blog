@@ -13,6 +13,7 @@
     "core-js": "^3.6.5",
     "graphql": "^16.5.0",
     "graphql-tag": "^2.12.6",
+    "heroku": "^7.62.0",
     "vue": "^3.0.0",
     "vue-router": "^4.1.3"
   },
