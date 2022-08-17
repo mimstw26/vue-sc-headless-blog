@@ -19,7 +19,7 @@
 
 <script>
 //import BlogGrid from '../components/BlogGrid.vue';
-import { ALL_POSTS_QUERY } from '../graphql'
+import { ALL_POSTS_QUERY } from '../constants/graphql'
 import { useQuery } from '@vue/apollo-composable'
 
   export default{
