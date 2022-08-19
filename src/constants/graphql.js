@@ -14,3 +14,16 @@ export const ALL_POSTS_QUERY = gql`
     }
   }
 `
+
+export const SINGLE_POST_QUERY = gql`
+  query Tmtestcontenttype($tmtestcontenttypeId: String!) {
+  tmtestcontenttype(id: $tmtestcontenttypeId) {
+    body
+    abstract
+    id
+    picture
+    publishdate
+    title
+  }
+}
+`
